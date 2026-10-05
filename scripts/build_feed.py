@@ -3,7 +3,6 @@
 
 import html
 import json
-import re
 from datetime import datetime, timezone
 from email.utils import format_datetime
 from pathlib import Path
@@ -52,8 +51,6 @@ def load_videos():
 def short_description(text, limit=600):
     if not text:
         return ""
-    text = re.split(r"\n\s*(?:Subscribe|My links|SUPPORT|http)", text)[0].strip()
-    text = re.sub(r"\n{2,}", "\n", text)
     if len(text) > limit:
         text = text[:limit].rsplit(" ", 1)[0] + "\u2026"
     return text

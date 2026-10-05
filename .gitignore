@@ -7,3 +7,5 @@ __pycache__/
 /videos.json
 /slow.py
 /slow.log
+/sync_data.py
+/clean.py
